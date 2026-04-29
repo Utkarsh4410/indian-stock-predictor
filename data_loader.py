@@ -25,6 +25,7 @@ def fetch_data(ticker: str, period: str = "5y") -> pd.DataFrame:
         if data.index.tz is not None:
             data.index = data.index.tz_localize(None)
             
+        data = data.dropna()
         return data
     except Exception as e:
         raise Exception(f"Error fetching data for {ticker}: {str(e)}")

@@ -6,11 +6,12 @@ from datetime import datetime, timedelta
 
 from data_loader import fetch_data, prepare_data_for_lstm
 from model import build_lstm_model, train_model, make_predictions, predict_next_day, save_model_and_scaler, load_model_and_scaler
+from sentiment_analyzer import get_stock_news_sentiment
 
 st.set_page_config(page_title="Indian Stock Market Predictor", layout="wide")
 
 st.title("📈 Indian Stock Market Predictor (NSE/BSE)")
-st.markdown("Predict future stock prices using Long Short-Term Memory (LSTM) Neural Networks.")
+st.markdown("Predict future stock prices using Long Short-Term Memory (LSTM) Neural Networks and analyze AI News Sentiment.")
 
 # Sidebar for user inputs
 st.sidebar.header("User Input")
@@ -109,6 +110,20 @@ if st.sidebar.button("Fetch Data & Predict"):
                 col1, col2, col3 = st.columns(3)
                 col1.metric("Last Close Price", f"₹{last_actual_price:.2f}")
                 col2.metric("Predicted Next Close", f"₹{next_day_price:.2f}", f"{price_change:.2f} ({percent_change:.2f}%)")
+                
+            # 7. AI News Sentiment Analysis
+            st.write("### 📰 AI News Sentiment Analysis")
+            with st.spinner("Fetching latest news and analyzing sentiment..."):
+                sentiment_data = get_stock_news_sentiment(ticker)
+                
+                if "error" in sentiment_data:
+                    st.warning(sentiment_data["error"])
+                else:
+                    st.metric("Overall Market Sentiment", sentiment_data["overall_label"], f"Score: {sentiment_data['overall_score']:.2f}")
+                    
+                    st.write("#### Latest Headlines")
+                    for article in sentiment_data["articles"]:
+                        st.markdown(f"**{article['label']}** | [{article['title']}]({article['link']}) *(via {article['publisher']})*")
                 
         except Exception as e:
             st.error(f"An error occurred: {str(e)}")

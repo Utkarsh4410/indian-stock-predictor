@@ -6,3 +6,4 @@ tensorflow
 streamlit
 plotly
 curl_cffi
+vaderSentiment
