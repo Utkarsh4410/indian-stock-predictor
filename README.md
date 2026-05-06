@@ -1,9 +1,11 @@
 <div align="center">
 
-<!-- Animated Typing Header -->
-<a href="https://indian-stock-predictor-u36d.onrender.com">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&pause=1000&color=3B82F6&center=true&vCenter=true&width=700&lines=📈+AI+Stock+Predictor;Indian+Market+Forecasting;LSTM+%2B+Sentiment+Analysis;NSE+%2F+BSE+Stocks" alt="Typing SVG" />
-</a>
+# 📈 AI Stock Predictor
+### *Indian Market LSTM Forecasting + AI News Sentiment*
+
+<img src="https://img.shields.io/badge/🤖_AI_Powered-LSTM_Neural_Network-3B82F6?style=for-the-badge&labelColor=0b0f19"/>
+<img src="https://img.shields.io/badge/📰_Real_Time-News_Sentiment-8B5CF6?style=for-the-badge&labelColor=0b0f19"/>
+<img src="https://img.shields.io/badge/📊_Live_Data-NSE_%2F_BSE-10B981?style=for-the-badge&labelColor=0b0f19"/>
 
 <br/>
 
