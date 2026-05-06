@@ -1,90 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
-  <defs>
-    <style>
-      .bubble { animation: float linear infinite; }
-      .b1 { animation-duration: 6s; animation-delay: 0s; }
-      .b2 { animation-duration: 7s; animation-delay: -1s; }
-      .b3 { animation-duration: 5.5s; animation-delay: -2s; }
-      .b4 { animation-duration: 8s; animation-delay: -0.5s; }
-      .b5 { animation-duration: 6.5s; animation-delay: -3s; }
-      .b6 { animation-duration: 7.5s; animation-delay: -1.5s; }
-      .b7 { animation-duration: 5s; animation-delay: -2.5s; }
-      .b8 { animation-duration: 9s; animation-delay: -0.8s; }
-
-      @keyframes float {
-        0%   { transform: translateY(0px); }
-        50%  { transform: translateY(-18px); }
-        100% { transform: translateY(0px); }
-      }
-
-      .label { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 700; font-size: 11px; fill: white; text-anchor: middle; dominant-baseline: middle; }
-      .sublabel { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400; font-size: 8px; fill: rgba(255,255,255,0.75); text-anchor: middle; dominant-baseline: middle; }
-    </style>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="900" height="220">
 
   <!-- Background -->
-  <rect width="800" height="200" rx="16" fill="#0b0f19"/>
+  <rect width="900" height="220" rx="16" fill="#0b0f19"/>
 
-  <!-- Python -->
-  <g class="bubble b1" transform="translate(65, 100)">
-    <circle r="45" fill="#3776AB" opacity="0.9"/>
-    <circle r="45" fill="none" stroke="#5a9fd4" stroke-width="1.5" opacity="0.5"/>
-    <text class="label" y="-8">🐍</text>
-    <text class="label" y="8">Python</text>
-    <text class="sublabel" y="22">3.11</text>
+  <!-- === Python === -->
+  <g transform="translate(80,110)">
+    <animateTransform attributeName="transform" type="translate"
+      values="80,110; 80,92; 80,110" dur="6s" repeatCount="indefinite"/>
+    <circle r="48" fill="#3776AB"/>
+    <circle r="48" fill="none" stroke="#5a9fd4" stroke-width="2" opacity="0.6"/>
+    <text font-family="Arial,sans-serif" font-size="22" text-anchor="middle" y="-8">🐍</text>
+    <text font-family="Arial,sans-serif" font-weight="bold" font-size="12" fill="white" text-anchor="middle" y="10">Python</text>
+    <text font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.7)" text-anchor="middle" y="24">3.11</text>
   </g>
 
-  <!-- TensorFlow -->
-  <g class="bubble b2" transform="translate(185, 100)">
-    <circle r="45" fill="#FF6F00" opacity="0.9"/>
-    <circle r="45" fill="none" stroke="#ffa040" stroke-width="1.5" opacity="0.5"/>
-    <text class="label" y="-8">🧠</text>
-    <text class="label" y="8">TensorFlow</text>
-    <text class="sublabel" y="22">LSTM</text>
+  <!-- === TensorFlow === -->
+  <g transform="translate(210,110)">
+    <animateTransform attributeName="transform" type="translate"
+      values="210,110; 210,90; 210,110" dur="7s" repeatCount="indefinite"/>
+    <circle r="48" fill="#FF6F00"/>
+    <circle r="48" fill="none" stroke="#ffa040" stroke-width="2" opacity="0.6"/>
+    <text font-family="Arial,sans-serif" font-size="22" text-anchor="middle" y="-8">🧠</text>
+    <text font-family="Arial,sans-serif" font-weight="bold" font-size="11" fill="white" text-anchor="middle" y="10">TensorFlow</text>
+    <text font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.7)" text-anchor="middle" y="24">LSTM</text>
   </g>
 
-  <!-- FastAPI -->
-  <g class="bubble b3" transform="translate(305, 100)">
-    <circle r="45" fill="#009688" opacity="0.9"/>
-    <circle r="45" fill="none" stroke="#4db6ac" stroke-width="1.5" opacity="0.5"/>
-    <text class="label" y="-8">⚡</text>
-    <text class="label" y="8">FastAPI</text>
-    <text class="sublabel" y="22">Backend</text>
+  <!-- === FastAPI === -->
+  <g transform="translate(340,110)">
+    <animateTransform attributeName="transform" type="translate"
+      values="340,110; 340,94; 340,110" dur="5.5s" repeatCount="indefinite"/>
+    <circle r="48" fill="#009688"/>
+    <circle r="48" fill="none" stroke="#4db6ac" stroke-width="2" opacity="0.6"/>
+    <text font-family="Arial,sans-serif" font-size="22" text-anchor="middle" y="-8">⚡</text>
+    <text font-family="Arial,sans-serif" font-weight="bold" font-size="12" fill="white" text-anchor="middle" y="10">FastAPI</text>
+    <text font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.7)" text-anchor="middle" y="24">Backend</text>
   </g>
 
-  <!-- VADER NLP -->
-  <g class="bubble b4" transform="translate(425, 100)">
-    <circle r="45" fill="#7C3AED" opacity="0.9"/>
-    <circle r="45" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.5"/>
-    <text class="label" y="-8">📰</text>
-    <text class="label" y="8">VADER</text>
-    <text class="sublabel" y="22">Sentiment</text>
+  <!-- === VADER NLP === -->
+  <g transform="translate(470,110)">
+    <animateTransform attributeName="transform" type="translate"
+      values="470,110; 470,88; 470,110" dur="8s" repeatCount="indefinite"/>
+    <circle r="48" fill="#7C3AED"/>
+    <circle r="48" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0.6"/>
+    <text font-family="Arial,sans-serif" font-size="22" text-anchor="middle" y="-8">📰</text>
+    <text font-family="Arial,sans-serif" font-weight="bold" font-size="12" fill="white" text-anchor="middle" y="10">VADER</text>
+    <text font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.7)" text-anchor="middle" y="24">Sentiment</text>
   </g>
 
-  <!-- Chart.js -->
-  <g class="bubble b5" transform="translate(545, 100)">
-    <circle r="45" fill="#E53E3E" opacity="0.9"/>
-    <circle r="45" fill="none" stroke="#fc8181" stroke-width="1.5" opacity="0.5"/>
-    <text class="label" y="-8">📊</text>
-    <text class="label" y="8">Chart.js</text>
-    <text class="sublabel" y="22">Plotly</text>
+  <!-- === Chart.js === -->
+  <g transform="translate(600,110)">
+    <animateTransform attributeName="transform" type="translate"
+      values="600,110; 600,93; 600,110" dur="6.5s" repeatCount="indefinite"/>
+    <circle r="48" fill="#E53E3E"/>
+    <circle r="48" fill="none" stroke="#fc8181" stroke-width="2" opacity="0.6"/>
+    <text font-family="Arial,sans-serif" font-size="22" text-anchor="middle" y="-8">📊</text>
+    <text font-family="Arial,sans-serif" font-weight="bold" font-size="12" fill="white" text-anchor="middle" y="10">Chart.js</text>
+    <text font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.7)" text-anchor="middle" y="24">Plotly</text>
   </g>
 
-  <!-- yFinance -->
-  <g class="bubble b6" transform="translate(660, 100)">
-    <circle r="45" fill="#1A56DB" opacity="0.9"/>
-    <circle r="45" fill="none" stroke="#60a5fa" stroke-width="1.5" opacity="0.5"/>
-    <text class="label" y="-8">💹</text>
-    <text class="label" y="8">yFinance</text>
-    <text class="sublabel" y="22">Live Data</text>
+  <!-- === yFinance === -->
+  <g transform="translate(730,110)">
+    <animateTransform attributeName="transform" type="translate"
+      values="730,110; 730,91; 730,110" dur="7.5s" repeatCount="indefinite"/>
+    <circle r="48" fill="#1A56DB"/>
+    <circle r="48" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+    <text font-family="Arial,sans-serif" font-size="22" text-anchor="middle" y="-8">💹</text>
+    <text font-family="Arial,sans-serif" font-weight="bold" font-size="12" fill="white" text-anchor="middle" y="10">yFinance</text>
+    <text font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.7)" text-anchor="middle" y="24">Live Data</text>
   </g>
 
-  <!-- Render -->
-  <g class="bubble b7" transform="translate(755, 100)">
-    <circle r="38" fill="#46E3B7" opacity="0.85"/>
-    <circle r="38" fill="none" stroke="#9efce3" stroke-width="1.5" opacity="0.5"/>
-    <text class="label" y="-7" style="font-size:10px;">☁️</text>
-    <text class="label" y="7" style="font-size:10px;">Render</text>
-    <text class="sublabel" y="20">Deploy</text>
+  <!-- === Render === -->
+  <g transform="translate(845,110)">
+    <animateTransform attributeName="transform" type="translate"
+      values="845,110; 845,95; 845,110" dur="5s" repeatCount="indefinite"/>
+    <circle r="42" fill="#46E3B7"/>
+    <circle r="42" fill="none" stroke="#9efce3" stroke-width="2" opacity="0.6"/>
+    <text font-family="Arial,sans-serif" font-size="20" text-anchor="middle" y="-7">☁️</text>
+    <text font-family="Arial,sans-serif" font-weight="bold" font-size="11" fill="#0b0f19" text-anchor="middle" y="9">Render</text>
+    <text font-family="Arial,sans-serif" font-size="9" fill="rgba(0,0,0,0.6)" text-anchor="middle" y="22">Deploy</text>
   </g>
+
 </svg>
