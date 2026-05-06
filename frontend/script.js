@@ -1,5 +1,5 @@
-// Use the URL of your backend. For local testing, use http://127.0.0.1:8000
-const API_BASE_URL = "http://127.0.0.1:8000/api";
+// API URL - points to our live Render backend
+const API_BASE_URL = "https://indian-stock-predictor-u36d.onrender.com/api";
 
 const elements = {
     tickerInput: document.getElementById('tickerInput'),
