@@ -13,6 +13,25 @@
     --glow: rgba(59, 130, 246, 0.15);
 }
 
+/* Full-screen floating bubbles canvas */
+#bubblesCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;   /* Clicks pass through to the app */
+}
+
+/* Ensure app content sits above canvas */
+.background-glow,
+main.container {
+    position: relative;
+    z-index: 1;
+}
+
+
 * {
     margin: 0;
     padding: 0;
