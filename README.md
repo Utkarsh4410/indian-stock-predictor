@@ -1,41 +1,186 @@
-# Indian Stock Market Predictor
+<div align="center">
 
-A Machine Learning and Web Application project to predict stock prices for the Indian Stock Market (NSE/BSE) using Long Short-Term Memory (LSTM) Neural Networks.
+<!-- Animated Typing Header -->
+<a href="https://indian-stock-predictor-u36d.onrender.com">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=35&pause=1000&color=3B82F6&center=true&vCenter=true&width=700&lines=📈+AI+Stock+Predictor;Indian+Market+Forecasting;LSTM+%2B+Sentiment+Analysis;NSE+%2F+BSE+Stocks" alt="Typing SVG" />
+</a>
 
-## Features
-- Fetches real-time and historical stock data using `yfinance`.
-- Visualizes historical closing prices and moving averages using `plotly`.
-- Builds and trains an LSTM model dynamically using `tensorflow`/`keras`.
-- Predicts the next trading day's closing price.
-- Interactive user interface built with `streamlit`.
+<br/>
 
-## Prerequisites
-- Python 3.9+ 
+<p align="center">
+  <strong>Next-Generation AI-Powered Indian Stock Market Prediction & News Sentiment Analysis</strong>
+</p>
 
-## Installation
+<br/>
 
-1. Navigate to the project directory:
+<!-- Badges -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TensorFlow-2.15-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
+  <img src="https://img.shields.io/badge/FastAPI-0.110-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Deployed-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/NSE-Stocks-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/BSE-Stocks-orange?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Sentiment-VADER_NLP-purple?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Charts-Plotly_&_ChartJS-red?style=for-the-badge"/>
+</p>
+
+<br/>
+
+<!-- Live Demo Button -->
+<a href="https://indian-stock-predictor-u36d.onrender.com">
+  <img src="https://img.shields.io/badge/🚀%20LIVE%20DEMO-Click%20Here-3B82F6?style=for-the-badge&labelColor=0b0f19" alt="Live Demo"/>
+</a>
+
+</div>
+
+---
+
+## ✨ Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 🧠 AI / ML Engine
+- **LSTM Neural Network** trained on historical price data
+- **Auto-save & load** trained models to skip retraining
+- **Next-day price prediction** with % change indicator
+- **RMSE evaluation** on test data
+
+</td>
+<td width="50%">
+
+### 📰 Sentiment Analysis
+- **Real-time news fetching** via Yahoo Finance
+- **VADER NLP** scoring for each headline
+- **Bullish 🐂 / Bearish 🐻 / Neutral 😐** overall signal
+- **Per-article scoring** with publisher info
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📊 Visualization
+- **Interactive price charts** (Chart.js + Plotly)
+- **Historical price trends** (last 100 days)
+- **Predicted vs Actual** chart overlay
+- **50-day & 200-day** Moving Averages
+
+</td>
+<td width="50%">
+
+### 🌐 Modern Architecture
+- **FastAPI backend** with REST API endpoints
+- **Premium dark-mode frontend** (HTML/CSS/JS)
+- **Deployed on Render** — always live
+- **Vercel-compatible frontend** for separate deploy
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🏗️ Tech Stack
+
+<div align="center">
+
+| Layer | Technology |
+|:---:|:---|
+| 🤖 **ML Model** | TensorFlow / Keras — LSTM Neural Network |
+| 📡 **Backend API** | FastAPI + Uvicorn |
+| 🎨 **Frontend** | Vanilla HTML, CSS (Glassmorphism), JavaScript |
+| 📈 **Data Source** | Yahoo Finance (`yfinance`) |
+| 💬 **NLP** | VADER Sentiment Analyzer |
+| 📊 **Charts** | Chart.js + Plotly |
+| ☁️ **Deployment** | Render (Backend) · Vercel (Frontend) |
+
+</div>
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 ```bash
-cd "/Users/subodh/stock market model"
+git clone https://github.com/Utkarsh4410/indian-stock-predictor.git
+cd indian-stock-predictor
 ```
 
-2. Install the required dependencies:
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-## Running the Application
-
-Start the Streamlit dashboard by running:
+### 3. Run the Backend API
 ```bash
-streamlit run app.py
+uvicorn api:app --reload
+```
+> The API starts at `http://127.0.0.1:8000`
+
+### 4. Open the Frontend
+Open `frontend/index.html` in your browser — or just navigate to `http://127.0.0.1:8000`
+
+---
+
+## 📱 How to Use
+
+```
+1. Enter a stock ticker (e.g. RELIANCE.NS / TCS.NS / INFY.NS)
+2. Click "Analyze Stock"
+3. Wait ~30-60 seconds for AI training (first run only)
+4. View price predictions, charts & sentiment analysis!
 ```
 
-This will open the dashboard in your default web browser (usually at `http://localhost:8501`).
+> 💡 **Ticker Format**: Use `.NS` for NSE stocks and `.BO` for BSE stocks
+> 
+> Examples: `RELIANCE.NS` · `TCS.NS` · `INFY.NS` · `HDFCBANK.NS` · `WIPRO.NS`
 
-## How to Use
-1. In the sidebar, enter a valid Yahoo Finance ticker for an Indian stock (e.g., `RELIANCE.NS` for NSE, `RELIANCE.BO` for BSE).
-2. Adjust the historical data period and sequence length if desired.
-3. Click "Fetch Data & Train Model".
-4. Wait for the data to load and the model to train (this may take a minute depending on your computer's speed and the epochs selected).
-5. View the actual vs predicted charts and the prediction for the next trading day!
+---
+
+## 🗂️ Project Structure
+
+```
+indian-stock-predictor/
+│
+├── 📄 api.py               → FastAPI backend (REST endpoints)
+├── 📄 app.py               → Streamlit UI (legacy)
+├── 📄 model.py             → LSTM Neural Network architecture
+├── 📄 data_loader.py       → Data fetching & preprocessing
+├── 📄 sentiment_analyzer.py→ News sentiment (VADER NLP)
+│
+├── 📁 frontend/
+│   ├── index.html          → Main UI page
+│   ├── styles.css          → Dark mode glassmorphism design
+│   └── script.js           → API calls & Chart rendering
+│
+├── 📁 models/              → Saved trained models (auto-generated)
+├── 📄 requirements.txt     → Python dependencies
+└── 📄 .python-version      → Python 3.11.9 (for Render)
+```
+
+---
+
+## 🌐 Live Deployment
+
+| Service | URL |
+|:---:|:---|
+| 🟢 **Live App (Backend + Frontend)** | [indian-stock-predictor-u36d.onrender.com](https://indian-stock-predictor-u36d.onrender.com) |
+| 📦 **GitHub Repository** | [github.com/Utkarsh4410/indian-stock-predictor](https://github.com/Utkarsh4410/indian-stock-predictor) |
+
+> ⚠️ The free Render tier may have a **cold start delay of ~30 seconds** after inactivity.
+
+---
+
+<div align="center">
+
+Made with ❤️ by **Subodh / Utkarsh**
+
+<img src="https://img.shields.io/badge/⭐%20Star%20this%20repo%20if%20you%20like%20it!-FFD700?style=for-the-badge"/>
+
+</div>
