@@ -1,7 +1,7 @@
 <div align="center">
 
-<!-- Banner with floating tech icons -->
-<img src="./banner.png" width="100%" alt="AI Stock Predictor - LSTM Neural Networks | NSE/BSE | AI Sentiment Analysis"/>
+<!-- Animated floating tech bubbles banner -->
+<img src="./banner.gif" width="100%" alt="AI Stock Predictor - Animated floating tech bubbles"/>
 
 <br/>
 
