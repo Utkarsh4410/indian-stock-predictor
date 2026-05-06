@@ -1,6 +1,6 @@
 import tensorflow as tf
 from tensorflow.keras.models import Sequential, load_model
-from tensorflow.keras.layers import Dense, LSTM, Dropout
+from tensorflow.keras.layers import Dense, LSTM, Dropout, Input
 import numpy as np
 import os
 import pickle
@@ -50,8 +50,11 @@ def build_lstm_model(input_shape):
     """
     model = Sequential()
     
+    # Add Input layer to prevent UserWarning
+    model.add(Input(shape=input_shape))
+    
     # First LSTM layer
-    model.add(LSTM(units=50, return_sequences=True, input_shape=input_shape))
+    model.add(LSTM(units=50, return_sequences=True))
     model.add(Dropout(0.2))
     
     # Second LSTM layer

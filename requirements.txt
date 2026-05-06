@@ -7,3 +7,5 @@ streamlit
 plotly
 curl_cffi
 vaderSentiment
+fastapi
+uvicorn

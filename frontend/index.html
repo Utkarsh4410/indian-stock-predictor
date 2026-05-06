@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAYA AI - Stock Predictor</title>
+    <meta name="description" content="AI-driven Stock Market Predictions and Sentiment Analysis.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <main class="container">
+        <header>
+            <h1 class="gradient-text">AI Stock Predictor</h1>
+            <p class="subtitle">Next-Gen LSTM Market Forecasting & News Sentiment</p>
+        </header>
+
+        <section class="search-section glass-panel">
+            <div class="input-group">
+                <input type="text" id="tickerInput" placeholder="Enter Ticker (e.g. RELIANCE.NS, TCS.NS)" value="">
+                <button id="predictBtn" class="primary-btn">
+                    <span class="btn-text">Analyze Stock</span>
+                    <div class="loader hidden"></div>
+                </button>
+            </div>
+            <div id="errorMsg" class="error-text hidden"></div>
+        </section>
+
+        <div id="resultsDashboard" class="dashboard hidden">
+            <!-- Price Prediction Card -->
+            <section class="card prediction-card glass-panel">
+                <h2>Next Day Forecast</h2>
+                <div class="price-display">
+                    <div class="current-price">
+                        <span class="label">Last Close</span>
+                        <h3 id="lastClosePrice">₹--</h3>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="predicted-price">
+                        <span class="label">Predicted Close</span>
+                        <h3 id="predictedPrice" class="highlight-text">₹--</h3>
+                        <span id="priceChange" class="change-badge">--</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chart Card -->
+            <section class="card chart-card glass-panel">
+                <h2>Historical Price Trend</h2>
+                <div class="chart-container">
+                    <canvas id="priceChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Sentiment Card -->
+            <section class="card sentiment-card glass-panel">
+                <h2>AI News Sentiment</h2>
+                <div class="sentiment-header">
+                    <h3 id="overallSentiment">--</h3>
+                    <span id="sentimentScore">Score: --</span>
+                </div>
+                <div class="news-list" id="newsList">
+                    <!-- News items will be injected here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

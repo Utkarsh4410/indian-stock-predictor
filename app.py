@@ -84,7 +84,7 @@ if st.sidebar.button("Fetch Data & Predict"):
 
             # 5. Plot Predictions vs Actual
             train = data[:train_data_len]
-            valid = data[train_data_len:]
+            valid = data[train_data_len:].copy()
             valid['Predictions'] = predictions
 
             st.write("### Actual vs Predicted Prices (Test Set)")
