@@ -3,9 +3,10 @@
 # 📈 AI Stock Predictor
 ### *Indian Market LSTM Forecasting + AI News Sentiment*
 
-<img src="https://img.shields.io/badge/🤖_AI_Powered-LSTM_Neural_Network-3B82F6?style=for-the-badge&labelColor=0b0f19"/>
-<img src="https://img.shields.io/badge/📰_Real_Time-News_Sentiment-8B5CF6?style=for-the-badge&labelColor=0b0f19"/>
-<img src="https://img.shields.io/badge/📊_Live_Data-NSE_%2F_BSE-10B981?style=for-the-badge&labelColor=0b0f19"/>
+<br/>
+
+<!-- Animated Floating Tech Icons -->
+<img src="./floating_icons.svg" width="100%" alt="Tech Stack: Python, TensorFlow, FastAPI, VADER, Chart.js, yFinance, Render"/>
 
 <br/>
 
