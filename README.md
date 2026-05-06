@@ -179,7 +179,7 @@ indian-stock-predictor/
 
 <div align="center">
 
-Made with ❤️ by **Subodh / Utkarsh**
+Made by Utkarsh**
 
 <img src="https://img.shields.io/badge/⭐%20Star%20this%20repo%20if%20you%20like%20it!-FFD700?style=for-the-badge"/>
 
