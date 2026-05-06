@@ -1,20 +1,7 @@
 <div align="center">
 
-# 📈 AI Stock Predictor
-### *Indian Market LSTM Forecasting + AI News Sentiment*
-
-<br/>
-
-<!-- Animated wave banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=header&text=AI%20Stock%20Predictor&fontSize=40&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=NSE%20%2F%20BSE%20%7C%20LSTM%20%2B%20Sentiment&descAlignY=60&descAlign=50" width="100%"/>
-
-<!-- Tech Stack Icons -->
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,tensorflow,fastapi,js,html,css&theme=dark&perline=6"/>
-</p>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=github,vercel,vscode&theme=dark&perline=6"/>
-</p>
+<!-- Banner with floating tech icons -->
+<img src="./banner.png" width="100%" alt="AI Stock Predictor - LSTM Neural Networks | NSE/BSE | AI Sentiment Analysis"/>
 
 <br/>
 
